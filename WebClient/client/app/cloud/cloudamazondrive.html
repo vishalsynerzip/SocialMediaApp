@@ -1,0 +1,25 @@
+<div>
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <h4 class="panel-title">
+      <button type="button" class="btn btn-danger" ng-click="amazondrivePicker()">Select Files</button>
+      <button type="button" class="btn btn-warning">Parse</button>
+      <button type="button" class="btn btn-success">Slide Show</button>
+    </h4>
+  </div>
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-sm-3">
+ <h4>You have selected files</h4>
+  <div ng-model="amazonDriveFileList" ng-repeat="file in amazonDriveFileList">
+   <h6><div id={{file.url}} ng-click="ShowBoxdriveFile($event)"><a href="">{{file.name}}</a></div></h6>
+
+<!--<label>{{currentFileUrl}}</label> -->
+      
+  </div>
+</div>
+<div class="col-sm-9">
+        <iframe src={{currentFileUrl}} style="height: 400px;" class="col-sm-12"> </iframe>
+      </div>
+</div>
+</div>

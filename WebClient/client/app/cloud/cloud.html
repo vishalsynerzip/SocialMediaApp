@@ -1,0 +1,125 @@
+<div ng-include="'components/navbar/navbar2.html'"></div>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-sm-3">
+			<div class="panel panel-warning" ui-on-drop="onDropGoogleDrive($event,$data,GoogleFiles)">
+				<div class="panel-heading">
+				<p><button type="button" class="btn btn-sm btn-info" ng-click="LoginWithGoogle()" >
+						<i class="fa fa-user" ng-show="!loginGoogleOK"></i>
+						<i class="fa fa-sign-out" ng-show="loginGoogleOK"></i>
+					</button>
+					Google Drive
+					<button type="button" class="btn btn-sm btn-danger pull-right" ng-click="PickerGoogle()" >
+							<i class="fa fa-files-o"></i>
+					</button>
+				</p>
+				</div>
+				<div class="panel-body">
+					<div class="well well-sm" ui-draggable="true"  ng-repeat="file in GoogleFiles" drag="file" on-drop-success="dropSuccessHandler($event,$index,GoogleFiles)">
+						<p><a ng-href="{{file.downUrl}}">{{file.name}}</a>
+							<span class=" pull-right">
+								<button type="button" class="btn btn-sm btn-warning" ng-click="SaveToDropBox(file.downUrl,file.name)">
+									<i class="fa fa-download"></i>
+								</button>
+								<button type="checkbox" class="btn btn-sm btn-success" >
+									<i class="fa fa-share-square"></i>
+								</button>
+							</span>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div id="drop_zone" style="height:200px">Drop files here</div>
+			<div id="results"/>
+		</div>
+		<div class="col-sm-3">
+			<div class="panel panel-warning" ui-on-drop="onDropDropBox($event,$data,DropBoxFiles)">
+				<div class="panel-heading">
+				<p><button type="button" class="btn btn-sm btn-info" ng-click="LoginWithDropbox()" >
+						<i class="fa fa-user" ng-show="!loginDropBoxOK"></i>
+						<i class="fa fa-sign-out" ng-show="loginDropBoxOK"></i>
+					</button>
+					DropBox
+					<button type="button" class="btn btn-sm btn-danger pull-right" ng-click="AuthenticateDB()">
+							<i class="fa fa-files-o"></i>
+					</button>
+				</p>
+				</div>
+				<div class="panel-body">
+					<div class="well well-sm" ui-draggable="true"  ng-repeat="file in DropBoxFiles" drag="file" on-drop-success="dropSuccessHandler($event,$index,GoogleFiles)">
+						<p><a ng-href="{{file.downUrl}}">{{file.name}}</a>
+							<span class=" pull-right">
+								<button type="button" class="btn btn-sm btn-warning" ng-click="SaveToGdrive(file.downUrl,file.name)">
+									<i class="fa fa-download"></i>
+								</button>
+								<button type="checkbox" class="btn btn-sm btn-success" >
+									<i class="fa fa-share-square"></i>
+								</button>
+							</span>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div id="authorize-div"></div>
+		</div>
+		<div class="col-sm-3">
+			<div class="panel panel-warning" ui-on-drop="onDropOneDrive($event,$data,OneDriveFiles)">
+				<div class="panel-heading">
+				<p><button type="button" class="btn btn-sm btn-info" ng-click="launchOneDrivePicker()" >
+						<i class="fa fa-user" ng-show="!loginOneDriveOK"></i>
+						<i class="fa fa-sign-out" ng-show="loginOneDriveOK"></i>
+					</button>
+					OneDrive
+					<button type="button" class="btn btn-sm btn-danger pull-right">
+							<i class="fa fa-files-o"></i>
+					</button>
+				</p>
+				</div>
+				<div class="panel-body">
+					<div class="well well-sm" ui-draggable="true"  ng-repeat="file in OneDriveFiles" drag="file" on-drop-success="dropSuccessHandler($event,$index,GoogleFiles)">
+						<p><a ng-href="{{file.downUrl}}">{{file.name}}</a>
+							<span class=" pull-right">
+								<button type="button" class="btn btn-sm btn-warning" ng-click="SaveToBoxDrive(file.downUrl,file.name)">
+									<i class="fa fa-download"></i>
+								</button>
+								<button type="checkbox" class="btn btn-sm btn-success" >
+									<i class="fa fa-share-square"></i>
+								</button>
+							</span>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-3">
+			<div class="panel panel-warning" ui-on-drop="onDropBox($event,$data,BoxFiles)">
+				<div class="panel-heading">
+				<p><button type="button" class="btn btn-sm btn-info" ng-click="boxdrivePicker()" >
+						<i class="fa fa-user" ng-show="!loginBoxOK"></i>
+						<i class="fa fa-sign-out" ng-show="loginBoxOK"></i>
+					</button>
+					Box
+					<button type="button" class="btn btn-sm btn-danger pull-right">
+							<i class="fa fa-files-o"></i>
+					</button>
+				</p>
+				</div>
+				<div class="panel-body">
+					<div class="well well-sm" ui-draggable="true"  ng-repeat="file in BoxFiles" drag="file" on-drop-success="dropSuccessHandler($event,$index,GoogleFiles)">
+						<p><a ng-href="{{file.downUrl}}">{{file.name}}</a>
+							<span class=" pull-right">
+								<button type="button" class="btn btn-sm btn-warning" ng-click="SaveToDropBox(file.downUrl,file.name)">
+									<i class="fa fa-download"></i>
+								</button>
+								<button type="checkbox" class="btn btn-sm btn-success" >
+									<i class="fa fa-share-square"></i>
+								</button>
+							</span>
+						</p>
+					</div>
+				</div>
+			</div>
+			</div>
+		</div>
+	</div>
+</div>

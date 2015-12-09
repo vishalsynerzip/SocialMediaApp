@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <base href="/">
+    <title>Social Media Connector</title>
+    <link rel="stylesheet" href="assets/css/themes.css">
+
+    <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="libs/angular-material/angular-material.css">
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/themes/base/jquery-ui.css"
+          rel="stylesheet" type="text/css"/>
+
+    <link rel="stylesheet" href="assets/css/font-awesome.css">
+
+    <!--
+    <link rel="stylesheet" href="assets/css/custombootstrap.min.css">
+-->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="libs/bootstrap-social-buttons/social-buttons.css"/>
+     <style>
+    #drop_zone {
+      border: 2px dashed #bbb;
+      -moz-border-radius: 5px;
+      -webkit-border-radius: 5px;
+      border-radius: 5px;
+      padding: 25px;
+      text-align: center;
+      font: 20pt bold 'Helvetica';
+      color: #bbb;
+    }
+    </style>
+    <script lang="text/javascript">
+    
+       
+       
+</script>
+</head>
+<body ng-app="SMT">
+<div ui-view="">
+
+</div>
+<div>
+
+</div>
+
+</body>
+
+
+<script src="assets/js/jquery-1.11.0.min.js"></script>
+<script src="libs/angularjs/angular.js"></script>
+<script src="libs/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script src="libs/bootstrap/dist/js/bootstrap.js"></script>
+<script src="libs/angulartics/src/angulartics.js"></script>
+<script src="/libs/angulartics-google-analytics/dist/angulartics-google-analytics.min.js"></script>
+<script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.13.3.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.11/jquery-ui.min.js"></script>
+<script src="libs/angular-material/angular-material.js"></script>
+<script src="libs/angular-animate/angular-animate.js"></script>
+<script src="libs/angular-aria/angular-aria.js"></script>
+<script src="libs/oauthio-web/dist/oauth.js"></script>
+<script src="libs/angular-base64/angular-base64.min.js"></script>
+<script src="libs/angular-native-dragdrop/draganddrop.js"></script> 
+<script type="text/javascript" src="https://apis.google.com/js/client.js"></script>
+<script type="text/javascript" src="https://apis.google.com/js/api.js"></script>
+ <script src="https://apis.google.com/js/platform.js" async defer></script>
+<script src="libs/ngGAPI/gapi.js"></script>
+<script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="s7gtnydn7stmpz8"></script>
+<script type="text/javascript" src="https://js.live.net/v5.0/OneDrive.js" id="onedrive-js" client-id="0000000040175C12"></script>
+<script type="text/javascript" src="https://app.box.com/js/static/select.js"></script>
+<script src="assets/js/evernote-sdk-minified.js"></script>
+<script src="libs/Upload/upload.js"></script>
+<script src="libs/dropbox/Dropboxjs.js"></script>
+
+
+<!--
+<script type="text/javascript" src="//platform.linkedin.com/in.js">evernote-sdk-minified.js jsOAuth-1.3.6.min.js
+    api_key:   751keyzmpldqpj
+</script>
+<script src="libs/ngLinkedIn/ngLinkedIn.js"></script>
+-->
+
+<script type="text/javascript" src="http://platform.linkedin.com/in.js">
+        //here goes the api key, and the callback function
+        //api_key: 751keyzmpldqpj
+    </script>
+
+<!-- JS Files Developed -->
+<script src="app.js"></script>
+<script src="components/navbar/navbar.controller.js"></script>
+
+<!-- Configs -->
+<script src="app/main/main.config.js"></script>
+<script src="app/socialmedia/socialmedia.config.js"></script>
+<script src="app/cloud/cloud.config.js"></script>
+
+<!-- Controllers -->
+<script src="app/main/main.controller.js"></script>
+<script src="app/socialmedia/socialmedia.controller.js"></script>
+<script src="app/cloud/cloud.controller.js"></script>
+
+<!-- Directives -->
+<script src="app/socialmedia/myLinkedin.directive.js"></script>
+<script src="app/socialmedia/myGoogle.directive.js"></script>
+<script src="app/cloud/cloudGdrive.directive.js"></script>
+<script src="app/cloud/cloudDropbox.directive.js"></script>
+<script src="app/cloud/cloudOnedrive.directive.js"></script>
+<script src="app/cloud/cloudBoxdrive.directive.js"></script>
+<script src="app/cloud/cloudamazondrive.directive.js"></script>
+<script src="app/cloud/cloudEvernote.directive.js"> </script>
+
+<!-- Services -->
+<script src="app/socialmedia/socialmedia.service.js"></script>
+<script src="app/cloud/cloud.services.js"></script>
+
+</html>

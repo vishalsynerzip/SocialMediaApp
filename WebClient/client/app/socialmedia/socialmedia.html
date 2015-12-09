@@ -1,0 +1,69 @@
+<div ng-include="'components/navbar/navbar2.html'"></div>
+<div class="container-fluid">
+	<div class="col-sm-2" >
+    <nav class="nav-sidebar">
+		<ul class="nav tabs">
+          <li class=""><a href="#tab1" data-toggle="tab">
+            <button class="btn btn-facebook" style="width: 100%;"><i class="fa fa-facebook"></i> | Facebook</button>
+          </a></li>
+          <li class=""><a href="#tab2" data-toggle="tab">
+            <button class="btn btn-twitter" style="width: 100%;"><i class="fa fa-twitter"></i> | Twitter</button>
+          </a></li>
+          <li class=""><a href="#tab3" data-toggle="tab">
+            <button class="btn btn-google-plus" style="width: 100%;" ng-click="LoginWithGoogle()"><i class="fa fa-google-plus"></i> | Google+</button>
+          </a></li>
+					<li class=""><a href="#tab4" data-toggle="tab">
+						<button class="btn btn-linkedin" style="width: 100%;" ng-click="LoginWithLinkedIn()"><i class="fa fa-linkedin"></i> | LinkedIn</button>
+					</a></li>
+					<li class=""><a href="#tab5" data-toggle="tab">
+						<button class="btn btn-pinterest" style="width: 100%; height: 90%;"><i class="fa fa-pinterest"></i> | Pinterest+</button>
+					</a></li>
+					<li class=""><a href="#tab6" data-toggle="tab">
+						<button class="btn btn-instagram" style="width: 100%;"><i class="fa fa-instagram"></i> | Instagram</button>
+					</a></li>
+					<li class=""><a href="#tab7" data-toggle="tab">
+						<button class="btn btn-youtube" style="width: 100%;"><i class="fa fa-youtube"></i> | YouTube</button>
+					</a></li>
+					<li class="active"><a href="#tab8" data-toggle="tab">
+						<button class="btn btn-tumblr" style="width: 100%;"><i class="fa fa-tumblr"></i> | Tumblr</button>
+					</a></li>
+		</ul>
+	</nav>
+</div>
+
+<!-- tab content -->
+<div class="tab-content">
+<div class="tab-pane text-style col-sm-10" id="tab1">
+  <h2>Lorem ipsum</h2>
+       <p>
+         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+         standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+         a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining
+         essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+         and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+       </p>
+       <hr>
+      <img src="http://placehold.it/350x250" class="img-rounded pull-right">
+</div>
+<div class="tab-pane text-style col-sm-10" id="tab2">
+  <h2>Dolor asit amet</h2>
+   <p>Dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+    ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+    dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+    et dolore magna aliquyam erat, sed diam voluptua.</p>
+    <hr>
+          <img src="http://placehold.it/150x90" class="img-rounded pull-left">
+</div>
+<div class="tab-pane active text-style col-sm-10" id="tab4">
+	<h2>{{username}} hurray</h2>
+	<div class="" ng-controller="socialmediaCtrl">
+		<my-linkedin></my-linkedin>
+	</div>
+</div>
+<div class="tab-pane active text-style col-sm-10" id="tab3" ng-controller="socialmediaCtrl">
+		<my-Google></my-Google>
+	</div>
+</div>
+</div>
+</div>

@@ -1,0 +1,14 @@
+{
+  "name": "MEAN-STACK-webclient",
+  "version": "1.0.0",
+  "description": "This is a web client for MEAN-STACK-webserver",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "angular-http-api": "0.0.2",
+    "express": "^4.13.1",
+    "oauth": "^0.9.12"
+  }
+}
